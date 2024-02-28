@@ -7,5 +7,5 @@ A sample main() function is included to show how to include functions within an 
 This work is based on an original Github repository by KOTzulla. It is based on STM32F4 and can be located at: https://github.com/KOTzulla/stm32_at21cs01
 Thanks to KOTzulla for his help in teaching me the nature of open drain GPIO!
 
-Some of functions are set with the attribute "__not_in_flash_func" to move a function to SRAM prior to execution. This is needed due to the very tight timing requirements of the AT21CS01 device. In testing, the first bit of the first byte read was dropped when the ReadByte function ran from Flash.
+Some of functions are set with the attribute "__not_in_flash_func" to move a function to SRAM prior to execution. This is needed due to the very tight timing requirements of the AT21CS01 device. In testing, the first bit of the first byte read was dropped when the ReadByte function ran from Flash. Moving to SRAM resolved this issue.
 
